@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Huffman Encoding Visualizer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- stylesheets -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- favicon -->
+	<link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+<body>
+	<div class="container">
+		<div class="cont">
+			<h1 id="huffman_title" style="padding-top:10px;">Encoder / Decoder</h1>
+
+			<p class="lead">
+				<div class="row">
+					<div class="col-xs-5">
+						<form>
+							<div class="form-group">
+								<textarea id="huffman_input" class="form-control" style="width:100%; height:200px;"
+									placeholder="Start typing, or drop text file here..."></textarea>
+							</div>
+						</form>
+					</div>
+
+
+					<div class="col-xs-5">
+						<div class="box" id="huffman_bits"
+							style=" padding:20px 20px; font-family:Courier New; max-height:500px; height: 200px; overflow-x:hidden; overflow-y:auto;">
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-10">
+						<div class="box" id="huffman_graph" style="height:500px;">
+							<i style="line-height:500px;">Type to see graph...</i>
+						</div>
+
+						<div id="fullscreen_icon">
+							<i class="fa fa-arrows-alt"></i>
+						</div>
+
+						<div id="hide_fullscreen_icon">
+							<i class="fa fa-times"></i>
+						</div>
+					</div>
+				</div>
+
+			</p>
+		</div>
+	</div><!-- /.container -->
+
+	<!-- libraries -->
+	<script src="js/libraries/jquery-2.1.3.min.js"></script>
+	<script src="js/libraries/bootstrap.min.js"></script>
+	<script src="js/libraries/jit.js"></script>
+	<script src="js/libraries/binary_tree_visualizer.js"></script>
+	<script src="js/libraries/priority-queue.js"></script>
+
+	<!-- huffman scripts -->
+	<script src="js/huffman/build_character_nodes.js"></script>
+	<script src="js/huffman/build_tree.js"></script>
+	<script src="js/huffman/build_path.js"></script>
+	<script src="js/huffman/encode_string.js"></script>
+
+	<!-- file scripts -->
+	<script src="js/file/input.js"></script>
+	<script src="js/file/output.js"></script>
+
+	<!-- text scripts -->
+	<script src="js/text/input.js"></script>
+
+	<!-- gui scripts -->
+	<script src="js/gui/index.js"></script>
+</body>
+
+</html>
